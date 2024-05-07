@@ -24,7 +24,7 @@ const EducationInfo = () => {
   };
 
   return (
-    <section className="informationSection">
+    <section className="information-section">
       <h1>Education</h1>
       <div className="input-container">
         <label>School Name: </label>

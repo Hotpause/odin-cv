@@ -28,7 +28,7 @@ const WorkInfo = () => {
   };
 
   return (
-    <section className="informationSection">
+    <section className="information-section">
       <h1>Experience</h1>
       <div className="input-container">
         <label>Company Name: </label>

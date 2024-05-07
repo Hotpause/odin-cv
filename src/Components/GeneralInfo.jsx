@@ -1,42 +1,56 @@
 import { useState } from "react";
 
 const GeneralInfo = () => {
-  const [name, setName] = useState("test");
-  const [email, setEmail] = useState("test");
-  const [number, setNumber] = useState("test");
-  const [location, setLocation] = useState("test");
+  const [personalInfo, setPersonalInfo] = useState({
+    name: "test",
+    email: "test",
+    number: "test",
+    location: "test",
+  });
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleNumberChange = (e) => {
-    setNumber(e.target.value);
-  };
-  const handleLocationChange = (e) => {
-    setLocation(e.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setPersonalInfo({ ...personalInfo, [name]: value });
   };
 
   return (
-    <section className="informationSection">
+    <section className="information-section">
       <h1>Personal Information</h1>
       <div className="input-container">
         <label>Full Name: </label>
-        <input type="text" value={name} onChange={handleNameChange} />
+        <input
+          type="text"
+          name="name"
+          value={personalInfo.name}
+          onChange={handleChange}
+        />
       </div>
       <div className="input-container">
         <label>Email: </label>
-        <input type="email" value={email} onChange={handleEmailChange} />
+        <input
+          type="email"
+          name="email"
+          value={personalInfo.email}
+          onChange={handleChange}
+        />
       </div>
       <div className="input-container">
         <label>Phone Number:</label>{" "}
-        <input type="tel" value={number} onChange={handleNumberChange} />
+        <input
+          type="tel"
+          name="number"
+          value={personalInfo.number}
+          onChange={handleChange}
+        />
       </div>
       <div className="input-container">
         <label>Location: </label>
-        <input type="text" value={location} onChange={handleLocationChange} />
+        <input
+          type="text"
+          name="location"
+          value={personalInfo.location}
+          onChange={handleChange}
+        />
       </div>
     </section>
   );

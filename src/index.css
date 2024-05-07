@@ -2,7 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  border: 5px solid green;
+  /* border: 5px solid green; */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -19,8 +19,9 @@
 
 .main-container {
   border: 3px solid green;
-  display: flex;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 40px;
   justify-content: space-between;
 }
 
@@ -39,13 +40,20 @@
   gap: 90px;
 }
 
-.informationSection > h1 {
+.information-section > h1 {
   font-size: x-large;
 }
-.informationSection {
+.information-section {
   display: flex;
   flex-direction: column;
   border: 2px solid red;
+}
+
+.preview-section {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  width: 100%;
 }
 .input-container {
   padding: 0px;
