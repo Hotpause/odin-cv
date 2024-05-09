@@ -46,7 +46,8 @@ function App() {
     fromdate: "2018-08-01",
     todate: "2018-08-01",
     location: "Remote",
-    description: "Nice",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime facilis quae magnam obcaecati sunt, sed voluptates adipisci architecto officia sint? Necessitatibus tempore, officia ipsa aliquid odit porro voluptate quasi blanditiis.",
   });
 
   const handleWorkChange = (e) => {
@@ -87,8 +88,8 @@ function App() {
           position={workInfo.position}
           workFromDate={workInfo.fromdate}
           workToDate={workInfo.todate}
-          workDescription={workInfo.location}
-          workLocation={workInfo.description}
+          workDescription={workInfo.description}
+          workLocation={workInfo.location}
           // onSubmit={handleSubmit}
         />
       </section>
